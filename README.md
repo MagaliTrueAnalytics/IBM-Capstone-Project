@@ -36,7 +36,7 @@ Some of the trends to be explore include:
 
 This project is built using:
 
-📓Platform: Jupyter Notebooks
+📓Platform: Jupyter Notebook
 
 🐍Programming language: Python
 
