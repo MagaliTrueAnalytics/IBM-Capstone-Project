@@ -69,7 +69,11 @@ Lab 24: Miscellaneous Charts
 
 🐍Programming language: Python
 
-🐼Libraries: Pandas, Matplotlib, Seaborn
+🛢️Database: SQLite
+
+🗂️Query language : SQL
+
+🐼Python Libraries: Pandas, Matplotlib, Seaborn
 
 ⚙️BI & Analytics Platform : IBM Cognos
 
