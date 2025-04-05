@@ -47,15 +47,21 @@ Lab 15: Correlation Analysis
 
 Lab 16: Data Visualization Basics
 
-Lab 17: Creating Histograms
+Lab 17: Histograms
 
-Lab 18: Using Box Plots
+Lab 18: Box Plots
 
 Lab 19: Scatter Plot Analysis
 
 Lab 20: Advanced Visualization with Bubble Plots
 
-Lab 21: Creating Pie Charts
+Lab 21: Pie Charts
+
+Lab 22: Stacked Charts
+
+Lab 23: Line Charts
+
+Lab 24: Miscellaneous Charts
 
 <h4>🛠️ Technologies Used</h4>
 
