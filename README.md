@@ -63,6 +63,8 @@ Lab 23: Line Charts
 
 Lab 24: Miscellaneous Charts
 
+Lab 00: Optimization of dataset for final visualization in IBM Cognos (also export as .py to generate the csv file efficiently)
+
 <h4>🛠️ Technologies Used</h4>
 
 📓Platform: Jupyter Notebook
