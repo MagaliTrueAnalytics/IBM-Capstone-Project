@@ -53,6 +53,8 @@ df_csv1 = df[['ResponseId', 'LanguageHaveWorkedWith', 'DatabaseHaveWorkedWith']]
 # Split/explode
 df_csv1['LanguageHaveWorkedWith'] = df_csv1['LanguageHaveWorkedWith'].str.split(';')
 df_csv1 = df_csv1.explode('LanguageHaveWorkedWith')
+df_csv1['DatabaseHaveWorkedWith'] = df_csv1['DatabaseHaveWorkedWith'].str.split(';')
+df_csv1 = df_csv1.explode('DatabaseHaveWorkedWith')
 print("Step 1 - Dataframe successfully exploded ! Size :", df.shape)
 # Sauvegarder le fichier CSV 1
 df_csv1.to_csv("csv1_language_database_hww.csv", index=False)
@@ -62,6 +64,8 @@ df_csv2 = df[['ResponseId', 'PlatformHaveWorkedWith', 'WebframeHaveWorkedWith']]
 # Split/explode
 df_csv2['PlatformHaveWorkedWith'] = df_csv2['PlatformHaveWorkedWith'].str.split(';')
 df_csv2 = df_csv2.explode('PlatformHaveWorkedWith')
+df_csv2['WebframeHaveWorkedWith'] = df_csv2['WebframeHaveWorkedWith'].str.split(';')
+df_csv2 = df_csv2.explode('WebframeHaveWorkedWith')
 print("Step 2 - Dataframe successfully exploded ! Size :", df.shape)
 # Sauvegarder le fichier CSV 2
 df_csv2.to_csv("csv2_platform_webframe_hww.csv", index=False)
@@ -71,6 +75,8 @@ df_csv3 = df[['ResponseId', 'LanguageWantToWorkWith', 'DatabaseWantToWorkWith']]
 # Split/explode
 df_csv3['LanguageWantToWorkWith'] = df_csv3['LanguageWantToWorkWith'].str.split(';')
 df_csv3 = df_csv3.explode('LanguageWantToWorkWith')
+df_csv3['DatabaseWantToWorkWith'] = df_csv3['DatabaseWantToWorkWith'].str.split(';')
+df_csv3 = df_csv3.explode('DatabaseWantToWorkWith')
 print("Step 3 - Dataframe successfully exploded ! Size :", df.shape)
 # Sauvegarder le fichier CSV 3
 df_csv3.to_csv("csv3_language_database_wtw.csv", index=False)
@@ -80,6 +86,8 @@ df_csv4 = df[['ResponseId', 'PlatformWantToWorkWith', 'WebframeWantToWorkWith']]
 # Split/explode
 df_csv4['PlatformWantToWorkWith'] = df_csv4['PlatformWantToWorkWith'].str.split(';')
 df_csv4 = df_csv4.explode('PlatformWantToWorkWith')
+df_csv4['WebframeWantToWorkWith'] = df_csv4['WebframeWantToWorkWith'].str.split(';')
+df_csv4 = df_csv4.explode('WebframeWantToWorkWith')
 print("Step 4 - Dataframe successfully exploded ! Size :", df.shape)
 # Sauvegarder le fichier CSV 4
 df_csv4.to_csv("csv4_platform_webframe_wtw.csv", index=False)
