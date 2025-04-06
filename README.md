@@ -63,7 +63,7 @@ Lab 23: Line Charts
 
 Lab 24: Miscellaneous Charts
 
-Lab 00: Optimization of dataset for final visualization in IBM Cognos (also export as .py to generate the csv file efficiently)
+Lab 00: Optimization of dataset for final visualization in IBM Cognos (This notebook describes the strategy used to modify the dataset in order to create CSV files that are directly usable in IBM Cognos. The Lab 00 .py file contains the program used to clean the original dataset.)
 
 <h4>🛠️ Technologies Used</h4>
 
