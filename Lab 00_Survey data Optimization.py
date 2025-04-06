@@ -1,8 +1,9 @@
 import pandas as pd
-#load the file
-file_path = "survey_data_updated 5.csv" 
+#load the file from google drive
+url = "https://drive.google.com/uc?export=download&id=1sY69yUa9gQ0b0MOUjVY6T0B3wG9Yu-aR"
+
 #convert as a dataframe
-data = pd.read_csv(file_path)
+data = pd.read_csv(url)
 print("Dataframe successfully loaded ! Size :", data.shape)
 #select variables of interest
 df = data[['ResponseId','Country','Employment','EdLevel','Age',
@@ -12,81 +13,7 @@ df = data[['ResponseId','Country','Employment','EdLevel','Age',
 print("Dataframe successfully selected ! Size :", df.shape)
 #check the first 5 rows
 print(df.head())
-#split and explode all the 8 columns with multiple values
-#Split LanguageHaveWorkedWith into list
-df['LanguageHaveWorkedWith'] = df['LanguageHaveWorkedWith'].str.split(';')
-df = df.explode('LanguageHaveWorkedWith')
-print("Step 1 - Dataframe successfully exploded ! Size :", df.shape)
-#Split DatabaseHaveWorkedWith into list
-df['DatabaseHaveWorkedWith'] = df['DatabaseHaveWorkedWith'].str.split(';')
-df = df.explode('DatabaseHaveWorkedWith')
-print("Step 2 - Dataframe successfully exploded ! Size :", df.shape)
-#Split PlatformHaveWorkedWith into list
-df['PlatformHaveWorkedWith'] = df['PlatformHaveWorkedWith'].str.split(';')
-df = df.explode('PlatformHaveWorkedWith')
-print("Step 3 - Dataframe successfully exploded ! Size :", df.shape)
-#Split WebframeHaveWorkedWith into list
-df['WebframeHaveWorkedWith'] = df['WebframeHaveWorkedWith'].str.split(';')
-df = df.explode('WebframeHaveWorkedWith')
-print("Step 4 - Dataframe successfully exploded ! Size :", df.shape)
-#Split LanguageWantToWorkWith into list
-df['LanguageWantToWorkWith'] = df['LanguageWantToWorkWith'].str.split(';')
-df = df.explode('LanguageWantToWorkWith')
-print("Step 5 - Dataframe successfully exploded ! Size :", df.shape)
-#Split DatabaseWantToWorkWith into list
-df['DatabaseWantToWorkWith'] = df['DatabaseWantToWorkWith'].str.split(';')
-df = df.explode('DatabaseWantToWorkWith')
-print("Step 6 - Dataframe successfully exploded ! Size :", df.shape)
-#Split PlatformWantToWorkWith into list
-df['PlatformWantToWorkWith'] = df['PlatformWantToWorkWith'].str.split(';')
-df = df.explode('PlatformWantToWorkWith')
-print("Step 7 - Dataframe successfully exploded ! Size :", df.shape)
-#Split WebframeWantToWorkWith into list
-df['WebframeWantToWorkWith'] = df['WebframeWantToWorkWith'].str.split(';')
-df = df.explode('WebframeWantToWorkWith')
-print("Step 8 - Dataframe successfully exploded ! Size :", df.shape)
-#display the top 10 of each of the 8 tools
-#top 10 LanguageHaveWorkedWith
-LanguageHaveWorkedWith_count = df['LanguageHaveWorkedWith'].value_counts() 
-top10_LanguageHaveWorkedWith = LanguageHaveWorkedWith_count.head(10)
-top10_LanguageHaveWorkedWith
-print("top 10 LanguageHaveWorkedWith :", top10_LanguageHaveWorkedWith)
-#top 10 DatabaseHaveWorkedWith
-DatabaseHaveWorkedWith_count = df['DatabaseHaveWorkedWith'].value_counts() 
-top10_DatabaseHaveWorkedWith = DatabaseHaveWorkedWith_count.head(10)
-top10_DatabaseHaveWorkedWith
-print("top 10 DatabaseHaveWorkedWith :", top10_DatabaseHaveWorkedWith)
-#top 10 PlatformHaveWorkedWith:
-PlatformHaveWorkedWith_count = df['PlatformHaveWorkedWith'].value_counts() 
-top10_PlatformHaveWorkedWith = PlatformHaveWorkedWith_count.head(10)
-top10_PlatformHaveWorkedWith
-print("top 10 PlatformHaveWorkedWith :", top10_PlatformHaveWorkedWith)
-#top 10 WebframeHaveWorkedWith  
-WebframeHaveWorkedWith_count = df['WebframeHaveWorkedWith'].value_counts() 
-top10_WebframeHaveWorkedWith = WebframeHaveWorkedWith_count.head(10)
-top10_WebframeHaveWorkedWith
-print("top 10 WebframeHaveWorkedWith :", top10_WebframeHaveWorkedWith)
-#top 10 LanguageWantToWorkWith
-LanguageWantToWorkWith_count = df['LanguageWantToWorkWith'].value_counts() 
-top10_LanguageWantToWorkWith = LanguageWantToWorkWith_count.head(10)
-top10_LanguageWantToWorkWith
-print("top 10 LanguageWantToWorkWith :", top10_LanguageWantToWorkWith)
-#top 10 DatabaseWantToWorkWith
-DatabaseWantToWorkWith_count = df['DatabaseWantToWorkWith'].value_counts() 
-top10_DatabaseWantToWorkWith = DatabaseWantToWorkWith_count.head(10)
-top10_DatabaseWantToWorkWith
-print("top 10 DatabaseWantToWorkWith :", top10_DatabaseWantToWorkWith)
-#top 10 PlatformWantToWorkWith
-PlatformWantToWorkWith_count = df['PlatformWantToWorkWith'].value_counts() 
-top10_PlatformWantToWorkWith = PlatformWantToWorkWith_count.head(10)
-top10_PlatformWantToWorkWith
-print("top 10 PlatformWantToWorkWith :", top10_PlatformWantToWorkWith)
-#top 10 WebframeWantToWorkWith
-WebframeWantToWorkWith_count = df['WebframeWantToWorkWith'].value_counts() 
-top10_WebframeWantToWorkWith = WebframeWantToWorkWith_count.head(10)
-top10_WebframeWantToWorkWith
-print("top 10 WebframeWantToWorkWith :", top10_WebframeWantToWorkWith)
-
+##create the CSV file for demographics CSV0##
 #Employment has 60 unique values, we will simplify it to 9 values
 #simplify Employment status function
 def mapping_employment(status):
@@ -109,15 +36,53 @@ def mapping_employment(status):
     else:
         return 'Other'
 
+df_csv0 = df[['ResponseId', 'Employment','Country', 'EdLevel', 'Age']]
 # Apply the function
-df['Employment_status'] = df['Employment'].map(mapping_employment)
+df_csv0['Employment_status'] = df_csv0['Employment'].map(mapping_employment)
 # Check the process execution
 print("Employment status successfully simplified ! Size :", df.shape)
 # Drop the original Employment column
-df.drop(columns=['Employment'], inplace=True)
+df_csv0.drop(columns=['Employment'], inplace=True)
 print("Employment column successfully dropped ! Size :", df.shape)
-# Check the new dataframe
-print("Dataframe successfully updated ! Size :", df.shape)
-# Save the updated dataframe to a new CSV file
-df.to_csv('survey_data_u5_optimized.csv', index=False)
-print("Csv file successfully saved !")
+#save the updated dataframe to a new CSV file
+df_csv0.to_csv('csv0_demographics.csv', index=False)
+print("csv0_demographics.csv successfully created ! Size :", df.shape)
+##Create the first CSV file CSV1##
+# Créer une nouvelle DataFrame pour CSV 1
+df_csv1 = df[['ResponseId', 'LanguageHaveWorkedWith', 'DatabaseHaveWorkedWith']]
+# Split/explode
+df_csv1['LanguageHaveWorkedWith'] = df_csv1['LanguageHaveWorkedWith'].str.split(';')
+df_csv1 = df_csv1.explode('LanguageHaveWorkedWith')
+print("Step 1 - Dataframe successfully exploded ! Size :", df.shape)
+# Sauvegarder le fichier CSV 1
+df_csv1.to_csv("csv1_language_database_hww.csv", index=False)
+print("csv1_language_database_hww.csv successfully created ! Size :", df_csv1.shape)
+# Créer une nouvelle DataFrame pour CSV 2
+df_csv2 = df[['ResponseId', 'PlatformHaveWorkedWith', 'WebframeHaveWorkedWith']]
+# Split/explode
+df_csv2['PlatformHaveWorkedWith'] = df_csv2['PlatformHaveWorkedWith'].str.split(';')
+df_csv2 = df_csv2.explode('PlatformHaveWorkedWith')
+print("Step 2 - Dataframe successfully exploded ! Size :", df.shape)
+# Sauvegarder le fichier CSV 2
+df_csv2.to_csv("csv2_platform_webframe_hww.csv", index=False)
+print("csv2_platform_webframe_hww.csv successfully created ! Size :", df_csv2.shape)
+# Créer une nouvelle DataFrame pour CSV 3
+df_csv3 = df[['ResponseId', 'LanguageWantToWorkWith', 'DatabaseWantToWorkWith']]
+# Split/explode
+df_csv3['LanguageWantToWorkWith'] = df_csv3['LanguageWantToWorkWith'].str.split(';')
+df_csv3 = df_csv3.explode('LanguageWantToWorkWith')
+print("Step 3 - Dataframe successfully exploded ! Size :", df.shape)
+# Sauvegarder le fichier CSV 3
+df_csv3.to_csv("csv3_language_database_wtw.csv", index=False)
+print("csv3_language_database_wtw.csv successfully created ! Size :", df_csv3.shape)
+# Créer une nouvelle DataFrame pour CSV 4
+df_csv4 = df[['ResponseId', 'PlatformWantToWorkWith', 'WebframeWantToWorkWith']]
+# Split/explode
+df_csv4['PlatformWantToWorkWith'] = df_csv4['PlatformWantToWorkWith'].str.split(';')
+df_csv4 = df_csv4.explode('PlatformWantToWorkWith')
+print("Step 4 - Dataframe successfully exploded ! Size :", df.shape)
+# Sauvegarder le fichier CSV 4
+df_csv4.to_csv("csv4_platform_webframe_wtw.csv", index=False)
+print("csv4_platform_webframe_wtw.csv successfully created ! Size :", df_csv4.shape)
+
+print("Process completed successfully !")
