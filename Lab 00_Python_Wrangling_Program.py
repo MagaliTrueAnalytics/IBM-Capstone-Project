@@ -49,7 +49,7 @@ df_csv0.to_csv('csv0_demographics.csv', index=False)
 print("csv0_demographics.csv successfully created ! Size :", df.shape)
 ##Create the first CSV file CSV1##
 # Créer une nouvelle DataFrame pour CSV 1
-df_csv1 = df[['ResponseId', 'LanguageHaveWorkedWith', 'DatabaseHaveWorkedWith']]
+df_csv1 = df[['ResponseId', 'Country','LanguageHaveWorkedWith', 'DatabaseHaveWorkedWith']]
 # Split/explode
 df_csv1['LanguageHaveWorkedWith'] = df_csv1['LanguageHaveWorkedWith'].str.split(';')
 df_csv1 = df_csv1.explode('LanguageHaveWorkedWith')
@@ -60,7 +60,7 @@ print("Step 1 - Dataframe successfully exploded ! Size :", df.shape)
 df_csv1.to_csv("csv1_language_database_hww.csv", index=False)
 print("csv1_language_database_hww.csv successfully created ! Size :", df_csv1.shape)
 # Créer une nouvelle DataFrame pour CSV 2
-df_csv2 = df[['ResponseId', 'PlatformHaveWorkedWith', 'WebframeHaveWorkedWith']]
+df_csv2 = df[['ResponseId', 'Country','PlatformHaveWorkedWith', 'WebframeHaveWorkedWith']]
 # Split/explode
 df_csv2['PlatformHaveWorkedWith'] = df_csv2['PlatformHaveWorkedWith'].str.split(';')
 df_csv2 = df_csv2.explode('PlatformHaveWorkedWith')
@@ -92,5 +92,9 @@ print("Step 4 - Dataframe successfully exploded ! Size :", df.shape)
 # Sauvegarder le fichier CSV 4
 df_csv4.to_csv("csv4_platform_webframe_wtw.csv", index=False)
 print("csv4_platform_webframe_wtw.csv successfully created ! Size :", df_csv4.shape)
+<<<<<<< HEAD:Lab 00_Python_Wrangling_Program.py
 
 print("Process completed successfully !")
+=======
+print("Process completed successfully !")
+>>>>>>> 5461b15 (Added 'Country' column to csv1_language_database_hww.csv and csv2_platform_webframe_hww.csv):Lab 00_Survey data Optimization.py
