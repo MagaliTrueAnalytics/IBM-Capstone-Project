@@ -92,9 +92,3 @@ print("Step 4 - Dataframe successfully exploded ! Size :", df.shape)
 # Sauvegarder le fichier CSV 4
 df_csv4.to_csv("csv4_platform_webframe_wtw.csv", index=False)
 print("csv4_platform_webframe_wtw.csv successfully created ! Size :", df_csv4.shape)
-<<<<<<< HEAD:Lab 00_Python_Wrangling_Program.py
-
-print("Process completed successfully !")
-=======
-print("Process completed successfully !")
->>>>>>> 5461b15 (Added 'Country' column to csv1_language_database_hww.csv and csv2_platform_webframe_hww.csv):Lab 00_Survey data Optimization.py
