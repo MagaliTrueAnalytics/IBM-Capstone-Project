@@ -55,6 +55,12 @@ Lab 26: More charts to support IT analysis - for final report
 
 Lab 00: Optimization of dataset for final visualization in IBM Cognos (This notebook describes the strategy used to modify the dataset in order to create CSV files that are directly usable in IBM Cognos. The Lab 00 .py file contains the program used to clean the original dataset.)
 
+<h4>📒 Final Reports</h4>
+
+[Power Point Report](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/edit/main/DataAnalystPresentation.pdf)
+
+[IBM Cognos Dashboard](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/edit/main/Dashboard_IBMCognos.pdf)
+
 <h4>🛠️ Technologies Used</h4>
 
 📓Platform: Jupyter Notebook
