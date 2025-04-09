@@ -37,20 +37,6 @@ Some of the trends to be explore include:
 
 Below is a list of the available labs:
 
-Lab 10: Data Normalization
-
-Lab 13: Exploring Data Distributions
-
-Lab 14: Outlier Detection
-
-Lab 15: Correlation Analysis
-
-Lab 16: Data Visualization Basics
-
-Lab 17: Histograms
-
-Lab 18: Box Plots
-
 Lab 19: Scatter Plot Analysis
 
 Lab 20: Advanced Visualization with Bubble Plots
@@ -62,6 +48,10 @@ Lab 22: Stacked Charts
 Lab 23: Line Charts
 
 Lab 24: Miscellaneous Charts
+
+Lab 25: U.S Market analysis - for final report
+
+Lab 26: More charts to support IT analysis - for final report
 
 Lab 00: Optimization of dataset for final visualization in IBM Cognos (This notebook describes the strategy used to modify the dataset in order to create CSV files that are directly usable in IBM Cognos. The Lab 00 .py file contains the program used to clean the original dataset.)
 
