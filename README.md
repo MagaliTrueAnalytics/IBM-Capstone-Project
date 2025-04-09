@@ -57,9 +57,9 @@ Lab 00: Optimization of dataset for final visualization in IBM Cognos (This note
 
 <h4>📒 Final Reports</h4>
 
-[Power Point Report](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/edit/main/DataAnalystPresentation.pdf)
+[Power Point Report](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/blob/main/DataAnalystPresentation.pdf)
 
-[IBM Cognos Dashboard](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/edit/main/Dashboard_IBMCognos.pdf)
+[IBM Cognos Dashboard](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/blob/main/Dashboard_IBMCognos.pdf)
 
 <h4>🛠️ Technologies Used</h4>
 
