@@ -1,4 +1,3 @@
-<h1>🚧🚧 UNDER CONSTRUCTION 🚧🚧</h1>
 <h2>IBM Data Analyst Professional Certificate - Laboratory Notebooks 🎓📊</h2>
 
 <h4>🛡️ About</h4>
@@ -31,8 +30,7 @@ Some of the trends to be explore include:
   
   Which database technologies are currently most sought after?
   
-  Which Integrated Development Environments (IDEs) are the most popular?
-
+ 
 <h4>🚀 Included Labs</h4>
 
 Below is a list of the available labs:
@@ -53,9 +51,11 @@ Lab 25: U.S Market analysis - for final report
 
 Lab 26: More charts to support IT analysis - for final report
 
-Lab 00: Optimization of dataset for final visualization in IBM Cognos (This notebook describes the strategy used to modify the dataset in order to create CSV files that are directly usable in IBM Cognos. The Lab 00 .py file contains the program used to clean the original dataset.)
+Lab 00*: Optimization of dataset for final visualization in IBM Cognos
 
-<h4>📒 Final Reports</h4>
+**This notebook describes the strategy used to modify the dataset in order to create CSV files that are directly usable in IBM Cognos. The Lab 00 .py file contains the program used to clean the original dataset.*
+
+<h4>📒 Final Report</h4>
 
 [Power Point Report](https://github.com/MagaliTrueAnalytics/IBM-Capstone-Project/blob/main/DataAnalystPresentation.pdf)
 
@@ -71,7 +71,7 @@ Lab 00: Optimization of dataset for final visualization in IBM Cognos (This note
 
 🗂️Query language : SQL
 
-🐼Python Libraries: Pandas, Matplotlib, Seaborn
+🐼Python Libraries: Pandas, Matplotlib, Seaborn, Folium
 
 ⚙️BI & Analytics Platform : IBM Cognos
 
@@ -82,6 +82,8 @@ Each lab includes practical demonstrations for creating visualizations such as:
 
 Histograms
 
+Bar charts
+
 Scatter Plots
 
 Box Plots
@@ -89,6 +91,8 @@ Box Plots
 Bubble Plots
 
 Pie Charts
+
+Choropleth map
 
 
 <h3>💻How to Use</h3>
