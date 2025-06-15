@@ -6,21 +6,21 @@ This project represents a critical milestone within the Capstone Project compone
 
 <h4>🌟 Overview</h4>
 
-This repository contains the interactive notebooks created as part of the IBM Data Analyst Professional Certificate program. The labs cover essential topics in data analysis, from preparation to visualization, using cutting-edge tools to extract meaningful insights.
+This repository contains the interactive notebooks created as part of the **IBM Data Analyst Professional Certificate** program. The labs cover essential topics in data analysis, from preparation to visualization, using cutting-edge tools to extract meaningful insights.
 
 <h4>🎯 Objective</h4>
 
 The main goal is to strengthen data analysis skills by exploring key concepts such as:
 
-Data Cleaning: Handling missing values and managing anomalies.
+**Data Cleaning:** Handling missing values and managing anomalies.
 
-Data Exploration: Identifying trends and relationships between variables.
+**Data Exploration:** Identifying trends and relationships between variables.
 
-Data Visualization: Creating insightful graphs for sharing findings.
+**Data Visualization:** Creating insightful graphs for sharing findings.
 
-Advanced Analysis: Exploring correlations and normalizing data for better comparisons.
+**Advanced Analysis:** Exploring correlations and normalizing data for better comparisons.
 
-Stack Overflow, the go-to platform for developers, conducted a global survey to capture insights into the developer community. This survey includes various questions related to professional experience, coding activities, tools, technologies, and preferences. The dataset offers important information about the current state of software development worldwide.
+**Stack Overflow**, the go-to platform for developers, conducted a global survey to capture insights into the developer community. This survey includes various questions related to professional experience, coding activities, tools, technologies, and preferences. The dataset offers important information about the current state of software development worldwide.
 The main objective of this project is to analyze data to uncover key trends, insights, and emerging skill requirements in the rapidly evolving technology landscape.
 [StackOverflow 2024 Survey](https://stackoverflow.blog/2024/08/06/2024-developer-survey/)
 
